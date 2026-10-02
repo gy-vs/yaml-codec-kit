@@ -1,0 +1,14 @@
+'use strict'
+
+const { it } = require('node:test')
+
+const assert = require('assert')
+
+const isNegativeZero = require('../../../lib/common').isNegativeZero
+
+it('isNegativeZero', function () {
+  assert(!isNegativeZero(0))
+  assert(!isNegativeZero(0.0))
+  assert(isNegativeZero(-0))
+  assert(isNegativeZero(-0.0))
+})
